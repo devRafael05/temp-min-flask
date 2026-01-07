@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  flask_app:
+    image: flask-app:latest
+    build:
+      context: .
+    container_name: flask_app
+    ports:
+      - "6060:5000"
+    restart: unless-stopped
